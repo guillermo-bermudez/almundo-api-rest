@@ -1,0 +1,29 @@
+{
+  "name": "api_rest",
+  "version": "1.0.0",
+  "description": "almundo hotels api_rest",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard",
+    "start-D": "SET DEBUG=api_rest:* && nodemon server.js",
+    "start": "NODE_ENV=production node server.js",
+    "test": "SET DEBUG=api_db:* && ava tests/ --verbose"
+  },
+  "author": "Felipe Bermudez",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.24.0",
+    "nodemon": "^1.14.11",
+    "proxyquire": "^1.8.0",
+    "sinon": "^4.2.1",
+    "standard": "^10.0.3",
+    "supertest": "^3.0.0"
+  },
+  "dependencies": {
+    "api_db": "file:../api_db",
+    "chalk": "^2.3.0",
+    "debug": "^3.1.0",
+    "express": "^4.16.2",
+    "express-asyncify": "^1.0.0"
+  }
+}
