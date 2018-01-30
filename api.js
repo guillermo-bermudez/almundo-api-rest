@@ -13,6 +13,10 @@ const api = asyncify(express.Router())
 let services, Hotel
 
 api.use('*', async (req, res, next) => {
+
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+
   if (!services) {
     debug(`${chalk.blue('Connecting to database')}`)
     try {

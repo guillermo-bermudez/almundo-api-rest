@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "standard",
+    "start": "node server.js",
     "start-D": "SET DEBUG=api_rest:* && nodemon server.js",
-    "start": "NODE_ENV=production node server.js",
     "test": "SET DEBUG=api_db:* && ava tests/ --verbose"
   },
   "author": "Felipe Bermudez",
